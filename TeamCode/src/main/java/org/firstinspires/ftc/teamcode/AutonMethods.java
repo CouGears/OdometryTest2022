@@ -54,7 +54,6 @@ public class AutonMethods {
         green2 = map.get(LED.class, "green2");
 
 
-
         motorFL.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         motorBL.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         motorFR.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
@@ -82,37 +81,38 @@ public class AutonMethods {
         motorBR.setPower(0);
         motorFR.setPower(0);
     }
-    public void setRed2()
-    {
+
+    public void setRed2() {
         green2.enable(false);
         red2.enable(true);
     }
-    public void setGreen2()
-    {
+
+    public void setGreen2() {
         red2.enable(false);
         green2.enable(true);
     }
-    public void setAmber2()
-    {
+
+    public void setAmber2() {
         red2.enable(true);
         green2.enable(true);
     }
-    public void setRed()
-    {
+
+    public void setRed() {
         green.enable(false);
         red.enable(true);
     }
-        public void setGreen()
-        {
-            red.enable(false);
-            green.enable(true);
-        }
-        public void setAmber()
-        {
-            red.enable(true);
-            red.enable(true);
-            green.enable(true);
-        }
+
+    public void setGreen() {
+        red.enable(false);
+        green.enable(true);
+    }
+
+    public void setAmber() {
+        red.enable(true);
+        red.enable(true);
+        green.enable(true);
+    }
+
     //Function to move the robot in any direction
     public void drive(double forward, double sideways, double speed) {
         runtime.reset();
@@ -229,3 +229,4 @@ public class AutonMethods {
 
 
     }
+}
